@@ -18,7 +18,6 @@ class ViewController: UIViewController, MyProtocol {
     func changeBacgroundColor(color: UIColor) {
         self.view.backgroundColor = color
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -62,8 +62,8 @@
 			children = (
 				8B6EB9D81E39CDE5009642F5 /* AppDelegate.swift */,
 				8B6EB9DA1E39CDE5009642F5 /* ViewController.swift */,
-				8B6EB9EA1E39CE43009642F5 /* SecondViewController.swift */,
 				8B6EB9F01E39DBC0009642F5 /* ThirdViewController.swift */,
+				8B6EB9EA1E39CE43009642F5 /* SecondViewController.swift */,
 				8B6EB9EE1E39CF97009642F5 /* MyProtocol.swift */,
 				8B6EB9DC1E39CDE5009642F5 /* Main.storyboard */,
 				8B6EB9DF1E39CDE5009642F5 /* Assets.xcassets */,
@@ -309,6 +309,7 @@
 				8B6EB9E91E39CDE5009642F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
