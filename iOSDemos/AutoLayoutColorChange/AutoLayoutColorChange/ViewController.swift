@@ -31,34 +31,8 @@ class ViewController: UIViewController {
        let vc = segue.destination as! NewViewController
        //vc.changeDelegate = self
         let btn = sender as! UIButton
-        self.setColor(btn)
-        vc.bgColor = self.bgColor
-    }
     
-
-    @IBAction func orangeButtonClicked(_ sender: UIButton) {
-        
-        self.setColor(sender)
-        
-    }
-    
-    func setColor(_ button : UIButton){
-        
-        let str = (button.titleLabel?.text)!
-        
-        switch str {
-        case "Orange":
-            bgColor = UIColor.orange
-        case "Blue" :
-            bgColor = UIColor.blue
-        case "Green":
-            bgColor = UIColor.green
-        case "Grey" :
-            bgColor = UIColor.gray
-        default:
-            bgColor = UIColor.white
-        }
-        
+        vc.bgColor = btn.superview?.backgroundColor
     }
 }
 

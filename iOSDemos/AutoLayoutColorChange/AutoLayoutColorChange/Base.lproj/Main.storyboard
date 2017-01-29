@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-cb-ytj">
-                                <rect key="frame" x="20" y="28" width="278" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-Gh-vXx">
-                                        <rect key="frame" x="111" y="42" width="56" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.14750555200000001" green="0.14750555200000001" blue="0.14750555200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Orange">
-                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="kF6-O1-bdY" kind="show" id="bZK-FC-MAa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-Nl-2Hl">
-                                <rect key="frame" x="26" y="167" width="278" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-Nl-2Hl">
+                                <rect key="frame" x="21" y="167" width="278" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orc-8k-gRZ">
                                         <rect key="frame" x="111" y="42" width="56" height="30"/>
@@ -57,9 +39,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0RK-hx-r51">
-                                <rect key="frame" x="26" y="315" width="121" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RK-hx-r51">
+                                <rect key="frame" x="26" y="315" width="120" height="233"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-hU-yGD">
                                         <rect key="frame" x="32" y="101" width="56" height="30"/>
@@ -74,10 +55,12 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="P8y-Rn-2Qw"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YlN-Fa-O03">
-                                <rect key="frame" x="179" y="315" width="119" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlN-Fa-O03">
+                                <rect key="frame" x="178" y="315" width="120" height="233"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DS-2D-rrR">
                                         <rect key="frame" x="31" y="101" width="56" height="30"/>
@@ -93,8 +76,44 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-cb-ytj">
+                                <rect key="frame" x="21" y="28" width="278" height="114"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-Gh-vXx">
+                                        <rect key="frame" x="111" y="42" width="56" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.14750555200000001" green="0.14750555200000001" blue="0.14750555200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Orange">
+                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="kF6-O1-bdY" kind="show" id="bZK-FC-MAa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="O6S-Pj-GXu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0RK-hx-r51" firstAttribute="width" secondItem="YlN-Fa-O03" secondAttribute="width" id="0GS-UP-b6N"/>
+                            <constraint firstItem="YlN-Fa-O03" firstAttribute="centerY" secondItem="0RK-hx-r51" secondAttribute="centerY" id="3NM-7e-wkL"/>
+                            <constraint firstItem="7Me-Nl-2Hl" firstAttribute="top" secondItem="nXO-cb-ytj" secondAttribute="bottom" constant="25" id="5RP-zy-PKA"/>
+                            <constraint firstItem="0RK-hx-r51" firstAttribute="height" secondItem="YlN-Fa-O03" secondAttribute="height" id="704-lK-gWF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nXO-cb-ytj" secondAttribute="trailing" constant="5" id="Ca1-sm-sAA"/>
+                            <constraint firstItem="YlN-Fa-O03" firstAttribute="leading" secondItem="0RK-hx-r51" secondAttribute="trailing" constant="32" id="D3W-sN-UtP"/>
+                            <constraint firstItem="0RK-hx-r51" firstAttribute="top" secondItem="7Me-Nl-2Hl" secondAttribute="bottom" constant="34" id="ISl-HC-wNe"/>
+                            <constraint firstItem="nXO-cb-ytj" firstAttribute="height" secondItem="7Me-Nl-2Hl" secondAttribute="height" id="V6r-yb-aaB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Me-Nl-2Hl" secondAttribute="trailing" constant="5" id="c40-wy-71y"/>
+                            <constraint firstItem="nXO-cb-ytj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="e1n-RV-uco"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YlN-Fa-O03" secondAttribute="trailing" constant="6" id="gGJ-sj-4An"/>
+                            <constraint firstItem="0RK-hx-r51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="k3D-a9-MeS"/>
+                            <constraint firstItem="nXO-cb-ytj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nPr-zV-eX9"/>
+                            <constraint firstItem="7Me-Nl-2Hl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="q4l-Yt-kw3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="viewBlue" destination="7Me-Nl-2Hl" id="LGt-Zv-dhB"/>
@@ -115,7 +134,7 @@
                         <viewControllerLayoutGuide type="top" id="OUc-Ks-i02"/>
                         <viewControllerLayoutGuide type="bottom" id="sJd-Qb-VUl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9l8-4J-QKf" customClass="n">
+                    <view key="view" contentMode="scaleToFill" id="9l8-4J-QKf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -140,6 +159,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xVP-ly-bWx"/>
+        <segue reference="bZK-FC-MAa"/>
     </inferredMetricsTieBreakers>
 </document>

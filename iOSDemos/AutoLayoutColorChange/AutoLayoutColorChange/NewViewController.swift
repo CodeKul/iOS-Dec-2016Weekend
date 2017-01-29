@@ -10,8 +10,6 @@ import UIKit
 
 class NewViewController: UIViewController {
     
-    var changeDelegate : ViewController?
-    
     var bgColor : UIColor?
 
     override func viewDidLoad() {
