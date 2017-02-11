@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         else if sender == blueSlider {
             blueVal = blueSlider.value
             blueLbl.text = "\(blueVal)"
-
         }
         else {
             alphaVal = alphaSlider.value

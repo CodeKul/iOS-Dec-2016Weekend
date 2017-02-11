@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dgc-2e-UJ2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gJO-YU-3pp">
+            <objects>
+                <viewController id="Dgc-2e-UJ2" customClass="ViewController" customModule="LoginPageAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YXD-Ti-T5z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghz-sJ-gGt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EUr-jw-fH2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0t-up-b3u">
+                                <rect key="frame" x="0.0" y="143" width="375" height="381"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Audi R8.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-hf-DIT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cv-Hf-AYN">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Dgc-2e-UJ2" id="twJ-4Y-YjE"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owr-G6-RmX">
+                                        <rect key="frame" x="0.0" y="266" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Dgc-2e-UJ2" id="DQA-TE-E5r"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh5-ga-L16">
+                                        <rect key="frame" x="168" y="312" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6cv-Hf-AYN" secondAttribute="trailing" id="46p-74-VJ7"/>
+                                    <constraint firstItem="owr-G6-RmX" firstAttribute="leading" secondItem="z0t-up-b3u" secondAttribute="leading" id="6Ta-xb-Owz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ohb-hf-DIT" secondAttribute="trailing" id="DCL-ku-bcr"/>
+                                    <constraint firstItem="owr-G6-RmX" firstAttribute="top" secondItem="6cv-Hf-AYN" secondAttribute="bottom" constant="16" id="EIs-bR-28W"/>
+                                    <constraint firstAttribute="height" constant="381" id="FjW-eb-kwf"/>
+                                    <constraint firstItem="6cv-Hf-AYN" firstAttribute="leading" secondItem="z0t-up-b3u" secondAttribute="leading" id="Gkh-oE-g94"/>
+                                    <constraint firstAttribute="trailing" secondItem="owr-G6-RmX" secondAttribute="trailing" id="PqD-Ig-j7I"/>
+                                    <constraint firstItem="Ohb-hf-DIT" firstAttribute="leading" secondItem="z0t-up-b3u" secondAttribute="leading" id="SeN-FU-xhL"/>
+                                    <constraint firstItem="zh5-ga-L16" firstAttribute="top" secondItem="owr-G6-RmX" secondAttribute="bottom" constant="16" id="Ymu-dD-bqh"/>
+                                    <constraint firstItem="zh5-ga-L16" firstAttribute="centerX" secondItem="z0t-up-b3u" secondAttribute="centerX" id="hml-2b-vEQ"/>
+                                    <constraint firstItem="6cv-Hf-AYN" firstAttribute="top" secondItem="Ohb-hf-DIT" secondAttribute="bottom" constant="20" id="hwb-OT-f7D"/>
+                                    <constraint firstItem="Ohb-hf-DIT" firstAttribute="top" secondItem="z0t-up-b3u" secondAttribute="top" id="l3e-4U-rAM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z0t-up-b3u" firstAttribute="centerY" secondItem="EUr-jw-fH2" secondAttribute="centerY" id="PC7-bs-3nw"/>
+                            <constraint firstAttribute="trailing" secondItem="z0t-up-b3u" secondAttribute="trailing" id="kyD-fK-6a3"/>
+                            <constraint firstItem="z0t-up-b3u" firstAttribute="leading" secondItem="EUr-jw-fH2" secondAttribute="leading" id="tc2-a0-wDo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtUsername" destination="6cv-Hf-AYN" id="LLv-BJ-efI"/>
+                        <outlet property="txtpassword" destination="owr-G6-RmX" id="Ld6-JO-PVU"/>
+                        <outlet property="verticalCenterConstraint" destination="PC7-bs-3nw" id="l8a-cD-0x4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahe-Gz-bY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Audi R8.jpg" width="200" height="200"/>
+    </resources>
+</document>
