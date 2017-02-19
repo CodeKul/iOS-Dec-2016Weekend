@@ -54,6 +54,13 @@
                                     <action selector="showClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydL-Vm-YSh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05z-eW-zEr">
+                                <rect key="frame" x="163" y="222" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nq-uU-4l8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,10 +70,12 @@
                             <constraint firstItem="Ong-jS-bew" firstAttribute="leading" secondItem="YTT-PH-gJz" secondAttribute="trailing" constant="17" id="Jdh-r5-FPj"/>
                             <constraint firstItem="9w6-jk-AUK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="K0H-YT-FMu"/>
                             <constraint firstItem="YTT-PH-gJz" firstAttribute="centerY" secondItem="Ong-jS-bew" secondAttribute="centerY" id="THg-om-71W"/>
+                            <constraint firstItem="05z-eW-zEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WRW-GV-41I"/>
                             <constraint firstItem="6PB-dc-327" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aRx-9x-yPD"/>
                             <constraint firstItem="peF-Bq-FOq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ex8-sy-1cs"/>
                             <constraint firstItem="6PB-dc-327" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k6f-AZ-HR0"/>
                             <constraint firstItem="6PB-dc-327" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nFh-fj-vGb"/>
+                            <constraint firstItem="05z-eW-zEr" firstAttribute="top" secondItem="Ong-jS-bew" secondAttribute="bottom" constant="8" id="vMH-dz-d0M"/>
                             <constraint firstItem="9w6-jk-AUK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="w5Y-G6-cZW"/>
                             <constraint firstItem="peF-Bq-FOq" firstAttribute="top" secondItem="9w6-jk-AUK" secondAttribute="bottom" constant="25" id="wuo-aQ-aqh"/>
                             <constraint firstItem="Ong-jS-bew" firstAttribute="top" secondItem="peF-Bq-FOq" secondAttribute="bottom" constant="27" id="xL0-Pj-gS7"/>

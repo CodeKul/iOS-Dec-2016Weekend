@@ -54,6 +54,7 @@ class ViewController: UIViewController {
     @IBAction func showClicked(_ sender : UIButton) {
      
         var statement: OpaquePointer? = nil
+        
         if sqlite3_prepare_v2(db, "SELECT * FROM StudentInfo", -1, &statement, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db))
             print("error preparing select: \(errmsg)")
@@ -83,6 +84,44 @@ class ViewController: UIViewController {
         statement = nil
     }
 
+    @IBAction func search(_ sender : UIButton) {
+        
+        var statement: OpaquePointer? = nil
+        var sqlStatement = "SELECT * FROM StudentInfo WHERE rno = '\(txtRno.text)'"
+        
+        
+        
+        
+        if sqlite3_prepare_v2(db, sqlStatement , -1, &statement, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db))
+            print("error preparing select: \(errmsg)")
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let rno = sqlite3_column_text(statement, 0)
+            let rnoString = String(cString: rno!)
+            print("rno = \(rnoString)")
+            
+            if let name = sqlite3_column_text(statement, 1) {
+                let nameString = String(cString: name)
+                print("name = \(nameString)")
+            } else {
+                print("name not found")
+            }
+            if let marks = sqlite3_column_text(statement, 2) {
+                let marksString = String(cString: marks)
+                print("marks = \(marksString)")
+            } else {
+                print("marks not found")
+            }
+        }
+        if sqlite3_finalize(statement) != SQLITE_OK {
+            let errmsg = String(cString: sqlite3_errmsg(db))
+            print("error finalizing prepared statement: \(errmsg)")
+        }
+        statement = nil
+    }
+
+    
     func textClearTextField() {
         
         txtRno.text = ""
