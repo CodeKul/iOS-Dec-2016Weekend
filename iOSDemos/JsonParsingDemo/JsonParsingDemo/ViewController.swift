@@ -90,11 +90,23 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        var detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        
+//        detailVC.loan = loanArray?[indexPath.row]
+//        
+//        self.navigationController?.pushViewController(detailVC, animated: true)
         
-        detailVC.loan = loanArray?[indexPath.row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        let VC = segue.destination as! DetailViewController
+        
+        let indexPath = self.tableView.indexPathForSelectedRow
+        
+        VC.loan = loanArray?[(indexPath?.row)!]
+        
+        
         
     }
     
@@ -118,7 +130,37 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             loanObj = Loan();
             loanObj.name = loan["name"] as? String
             loanObj.id = loan["id"] as? Int
+            loanObj.desc = loan["description"] as? [String : [String]]
+            loanObj.fundedAmount = loan["funded_amount"] as? Int
+            loanObj.basketAmount = loan["basket_amount"] as? Int
+            loanObj.image = loan["image"] as? [String : Int]
+            loanObj.activity = loan["activity"] as? String
+            loanObj.status = loan["status"] as? String
             
+            /*
+             
+             var id : Int?
+             var name : String?
+             var desc : [String : [String]]?
+             var status : String?
+             var fundedAmount : Int?
+             var basketAmount : Int?
+             var image : [String : Int]?
+             var activity : String?
+             var sector : String?
+             var themese : [String]?
+             var use : String?
+             var location : [String : Any]?
+             var partnerId : Int?
+             var postedDate : String?
+             var plannedExpDate :String?
+             var loanAmount : Int?
+             var borrowerCount : Int?
+             var lenderCount : Int?
+             var bonusCreditE : Bool?
+             var tags : [[String: String]]?
+             
+             */
             loanArray?.append(loanObj)
         }
         

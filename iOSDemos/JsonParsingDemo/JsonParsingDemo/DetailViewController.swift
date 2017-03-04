@@ -14,12 +14,28 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var lblName : UILabel?
     @IBOutlet var lblId : UILabel?
+    @IBOutlet var lblDesc : UILabel?
+    @IBOutlet var lblStatus : UILabel?
+    @IBOutlet var lblFundedAmt : UILabel?
+    @IBOutlet var lblBasketAmt : UILabel?
+    @IBOutlet var lblActivity : UILabel?
+    @IBOutlet var lblimg : UILabel?
+  
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblName?.text = loan?.name
         lblId?.text = "\((loan?.id)!)"
-        
+        let imgID = loan?.image?["id"]
+        let templateid = loan?.image?["template_id"]
+        lblimg?.text = "Id : \(imgID!) , template_id : \(templateid!)"
+        let arrLang = (loan?.desc?["languages"])!
+        lblDesc?.text = "languages : \(arrLang[0])"
+        lblStatus?.text = loan?.status
+        lblBasketAmt?.text = "\((loan?.basketAmount)!)"
+        lblFundedAmt?.text = "\((loan?.fundedAmount)!)"
+        lblActivity?.text = loan?.activity
         // Do any additional setup after loading the view.
     }
 
