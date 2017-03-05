@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let json: [String: Any] = ["id": 1,
-                                   "name": "Harsh",
+        let json: [String: Any] = ["id": 5,
+                                   "name": "Manish",
                                    "city":"Pune",
-                                   "salary":5000]
+                                   "salary":20000]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         let url = URL(string: "http://192.168.100.4:7979/start/insertstudent")!
@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
 
-            
+            let dict = try? JSONSerialization.jsonObject(with: data!, options: []) as! [String : Any]
+
+            print("ID :\(dict?["status"])\nName  : \(dict?["studId"])\n")
             
         }.resume()
     
