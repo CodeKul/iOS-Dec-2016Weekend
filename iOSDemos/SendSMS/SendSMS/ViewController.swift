@@ -9,7 +9,8 @@
 import UIKit
 import MessageUI
 
-class ViewController: UIViewController , MFMessageComposeViewControllerDelegate{
+
+class ViewController: UIViewController , MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +42,34 @@ class ViewController: UIViewController , MFMessageComposeViewControllerDelegate{
         
     }
     
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        print("\(result)")
+    }
+    
     @IBAction func sendSMS(_ sender : UIButton){
         
         if(MFMessageComposeViewController .canSendText())
         {
-        let messageVC = MFMessageComposeViewController()
-        messageVC.recipients = []
-        messageVC.body = "hello !! this is a test SMS"
-        messageVC.messageComposeDelegate = self
+            let messageVC = MFMessageComposeViewController()
+            messageVC.recipients = []
+            messageVC.body = "hello !! this is a test SMS"
+            messageVC.messageComposeDelegate = self
         
         present(messageVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func sendEmail(_ sender : UIButton){
+        
+        
+        if(MFMailComposeViewController .canSendMail()) {
+            let mailVC = MFMailComposeViewController()
+            mailVC.setSubject("Test Mail")
+            mailVC.setMessageBody("Hello \n This is a test mail !!", isHTML: false)
+            mailVC.setToRecipients(["codekul.gmail.com"])
+            mailVC.mailComposeDelegate = self
+            
+            present(mailVC, animated: true, completion: nil)
         }
     }
     
