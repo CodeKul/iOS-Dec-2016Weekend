@@ -33,10 +33,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBAction func selectImageFromCamera(_ sender: UIButton) {
         
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .camera
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .camera
+            imagePickerController.delegate = self
+            present(imagePickerController, animated: true, completion: nil)
+        }
+        else {
+            print("Camera not availabel")
+            
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
