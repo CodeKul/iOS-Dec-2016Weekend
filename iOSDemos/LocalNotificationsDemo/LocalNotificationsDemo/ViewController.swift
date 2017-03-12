@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(self.changeLableText), name: Notification.Name(rawValue: "MyNotif"), object: nil)
-        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeLableText), name: Notification.Name(rawValue: "MyNotif"), object: nil)
+    }
+    
     func changeLableText(sender : Notification) {
         
         let str = sender.object as! String
